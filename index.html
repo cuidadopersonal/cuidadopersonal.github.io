@@ -40,12 +40,24 @@
     .note {
       margin-top: 16px;
       font-size: 14px;
-      color: #555;
+      color: #666;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 14px 26px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 15px;
     }
   </style>
 
   <script>
     let redirected = false;
+    let interacted = false;
 
     function goToShop() {
       if (!redirected) {
@@ -55,12 +67,19 @@
     }
 
     // Detectar interacción humana
-    window.addEventListener("scroll", goToShop, { once: true });
-    window.addEventListener("mousemove", goToShop, { once: true });
-    window.addEventListener("touchstart", goToShop, { once: true });
+    ["scroll", "mousemove", "touchstart", "click"].forEach(event => {
+      window.addEventListener(event, () => {
+        interacted = true;
+        goToShop();
+      }, { once: true });
+    });
 
-    // Backup: si permanece 8 segundos
-    setTimeout(goToShop, 8000);
+    // Auto redirección suave (3 segundos)
+    setTimeout(() => {
+      if (!redirected) {
+        goToShop();
+      }
+    }, 3000);
   </script>
 </head>
 
@@ -70,12 +89,16 @@
 
     <p>
       Productos pensados para el bienestar, la confianza y el autocuidado.<br>
-      Explora de forma discreta y a tu ritmo.
+      Explora opciones cuidadosamente seleccionadas.
     </p>
 
     <div class="note">
-      Cargando experiencia…
+      Redirigiendo…
     </div>
+
+    <a class="button" href="https://dsensulove.com/collections/lenceria">
+      Continuar ahora
+    </a>
   </div>
 </body>
 </html>
