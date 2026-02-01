@@ -2,16 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Autocuidado y bienestar personal</title>
+  <title>Bienestar y autocuidado personal</title>
 
-  <!-- Evitar indexación -->
   <meta name="robots" content="noindex, nofollow">
-
-  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Descripción neutra -->
-  <meta name="description" content="Información sobre autocuidado y bienestar personal. Acceso discreto y responsable.">
+  <meta name="description" content="Explora opciones de bienestar y autocuidado de forma discreta.">
 
   <style>
     body {
@@ -32,56 +27,55 @@
 
     h1 {
       font-size: 22px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       color: #111;
     }
 
     p {
       font-size: 15px;
       color: #444;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .age {
-      margin: 16px 0;
-      font-weight: 500;
+    .note {
+      margin-top: 16px;
       font-size: 14px;
-      color: #333;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 14px 26px;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    a.button:hover {
-      opacity: 0.9;
+      color: #555;
     }
   </style>
+
+  <script>
+    let redirected = false;
+
+    function goToShop() {
+      if (!redirected) {
+        redirected = true;
+        window.location.href = "https://dsensulove.com/collections/lenceria";
+      }
+    }
+
+    // Detectar interacción humana
+    window.addEventListener("scroll", goToShop, { once: true });
+    window.addEventListener("mousemove", goToShop, { once: true });
+    window.addEventListener("touchstart", goToShop, { once: true });
+
+    // Backup: si permanece 8 segundos
+    setTimeout(goToShop, 8000);
+  </script>
 </head>
 
 <body>
   <div class="container">
-    <h1>Autocuidado y bienestar personal</h1>
+    <h1>Descubre una nueva forma de sentirte bien</h1>
 
     <p>
-      Información sobre autocuidado, relaciones y bienestar.<br>
-      Acceso discreto y responsable.
+      Productos pensados para el bienestar, la confianza y el autocuidado.<br>
+      Explora de forma discreta y a tu ritmo.
     </p>
 
-    <div class="age">Acceso para mayores de edad</div>
-
-    <!-- CAMBIA AQUÍ LA URL SI QUIERES ENVIAR A UNA COLECCIÓN -->
-    <a class="button" href="https://dsensulove.com/collections/lenceria">
-      Continuar
-    </a>
+    <div class="note">
+      Cargando experiencia…
+    </div>
   </div>
 </body>
 </html>
