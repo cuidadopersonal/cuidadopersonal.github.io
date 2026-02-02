@@ -12,7 +12,7 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #f4f4f4;
-      padding: 40px 16px;
+      padding: 24px 12px;
       text-align: center;
     }
 
@@ -20,7 +20,7 @@
       max-width: 420px;
       margin: auto;
       background: #ffffff;
-      padding: 32px 24px;
+      padding: 28px 20px;
       border-radius: 14px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
@@ -29,6 +29,7 @@
       font-size: 22px;
       margin-bottom: 14px;
       color: #111;
+      font-weight: 600;
     }
 
     p {
@@ -38,7 +39,7 @@
     }
 
     .note {
-      margin-top: 16px;
+      margin-top: 14px;
       font-size: 14px;
       color: #666;
     }
@@ -52,12 +53,16 @@
       text-decoration: none;
       border-radius: 10px;
       font-size: 15px;
+      font-weight: 500;
+    }
+
+    a.button:hover {
+      opacity: 0.9;
     }
   </style>
 
   <script>
     let redirected = false;
-    let interacted = false;
 
     function goToShop() {
       if (!redirected) {
@@ -68,37 +73,30 @@
 
     // Detectar interacción humana
     ["scroll", "mousemove", "touchstart", "click"].forEach(event => {
-      window.addEventListener(event, () => {
-        interacted = true;
-        goToShop();
-      }, { once: true });
+      window.addEventListener(event, goToShop, { once: true });
     });
 
-    // Auto redirección suave (3 segundos)
-    setTimeout(() => {
-      if (!redirected) {
-        goToShop();
-      }
-    }, 1200);
+    // Auto redirección suave (1.2 segundos)
+    setTimeout(goToShop, 1200);
   </script>
 </head>
 
 <body>
   <div class="container">
-    <h1>Descubre una nueva forma de sentirte bien</h1>
+    <h1>Autocuidado que se siente y se nota</h1>
 
     <p>
-      Productos pensados para el bienestar, la confianza y el autocuidado.<br>
-      Explora opciones cuidadosamente seleccionadas.
+      Lencería seleccionada para sentirte cómoda, segura y confiada.<br>
+      Explora opciones elegantes y bien valoradas.
     </p>
 
-    <div class="note">
-      Redirigiendo…
-    </div>
-
     <a class="button" href="https://dsensulove.com/collections/lenceria">
-      Continuar ahora
+      Explorar colección
     </a>
+
+    <div class="note">
+      Colección popular entre nuestros visitantes
+    </div>
   </div>
 </body>
 </html>
