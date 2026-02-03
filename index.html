@@ -2,17 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Bienestar y autocuidado personal</title>
+  <title>Acceso a colección privada</title>
 
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explora opciones de bienestar y autocuidado de forma discreta.">
+  <meta name="description" content="Acceso rápido y discreto a nuestra colección seleccionada.">
 
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #f4f4f4;
-      padding: 24px 12px;
+      padding: 40px 16px;
       text-align: center;
     }
 
@@ -20,16 +20,15 @@
       max-width: 420px;
       margin: auto;
       background: #ffffff;
-      padding: 28px 20px;
+      padding: 32px 24px;
       border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
     h1 {
-      font-size: 22px;
-      margin-bottom: 14px;
+      font-size: 21px;
+      margin-bottom: 12px;
       color: #111;
-      font-weight: 600;
     }
 
     p {
@@ -39,64 +38,47 @@
     }
 
     .note {
-      margin-top: 14px;
+      margin-top: 18px;
       font-size: 14px;
       color: #666;
     }
 
     a.button {
       display: inline-block;
-      margin-top: 22px;
+      margin-top: 24px;
       padding: 14px 26px;
       background: #000;
       color: #fff;
       text-decoration: none;
       border-radius: 10px;
       font-size: 15px;
-      font-weight: 500;
-    }
-
-    a.button:hover {
-      opacity: 0.9;
     }
   </style>
 
   <script>
-    let redirected = false;
-
-    function goToShop() {
-      if (!redirected) {
-        redirected = true;
-        window.location.href = "https://dsensulove.com/collections/lenceria";
-      }
-    }
-
-    // Detectar interacción humana
-    ["scroll", "mousemove", "touchstart", "click"].forEach(event => {
-      window.addEventListener(event, goToShop, { once: true });
-    });
-
-    // Auto redirección suave (1.2 segundos)
-    setTimeout(goToShop, 1200);
+    // Redirección forzada y segura
+    setTimeout(function () {
+      window.location.replace("https://dsensulove.com/collections/lenceria");
+    }, 900);
   </script>
 </head>
 
 <body>
   <div class="container">
-    <h1>Autocuidado que se siente y se nota</h1>
+    <h1>Estás a un paso</h1>
 
     <p>
-      Lencería seleccionada para sentirte cómoda, segura y confiada.<br>
-      Explora opciones elegantes y bien valoradas.
+      Accede ahora a nuestra colección privada de productos seleccionados
+      para bienestar y confianza personal.
     </p>
 
-    <a class="button" href="https://dsensulove.com/collections/lenceria">
-      Explorar colección
-    </a>
-
     <div class="note">
-      Colección popular entre nuestros visitantes
+      Redirigiendo automáticamente…
     </div>
+
+    <a class="button" href="https://dsensulove.com/collections/lenceria">
+      Continuar ahora
+    </a>
   </div>
 </body>
 </html>
